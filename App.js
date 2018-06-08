@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import FacebookLoginScreen from './FacebookLoginScreen';
 import Homepage from './homepage';
+
 // const FBSDK = require('react-native-fbsdk');
 // const {
 //   LoginButton,
@@ -44,13 +45,13 @@ export default class App extends Component<Props> {
     if (routeId === 'FirstScreen') {
       return (
         <FacebookLoginScreen
-          navigator={navigator} />
+          navigator={navigator} gameKey={route.gameKey} />
       );
     }
     if (routeId === 'Homepage') {
       return (
         <Homepage
-          navigator={navigator} />
+          navigator={navigator} gameKey={route.gameKey}/>
       );
     }
   }
